@@ -1,4 +1,4 @@
-function reverseInput() {
+let reverseInput = () => {
     let userInput = document.getElementById("user-input").value;
     let inputReversed = userInput.split("").reverse().join("");
 
@@ -8,3 +8,7 @@ function reverseInput() {
         document.getElementById("result").innerHTML = userInput + " is not a Palindrome";
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("submit-pal").addEventListener('click', reverseInput);
+})
